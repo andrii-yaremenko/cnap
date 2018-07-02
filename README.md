@@ -11,5 +11,5 @@
 
 
 
-source code - @mykolakozyr
+source code - @mykolakozyr;
 upd - @StasOstapenko, @andrii-yaremenko
