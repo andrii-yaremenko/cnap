@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   preserveAspectRatio="xMidYMid meet"
+   viewBox="0 0 640 640"
+   width="640"
+   height="640"
+   id="svg4626"
+   sodipodi:docname="priorOtg_7_ink.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata4630">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview4628"
+     showgrid="false"
+     showguides="true"
+     inkscape:pagecheckerboard="true"
+     inkscape:zoom="0.36875"
+     inkscape:cx="320"
+     inkscape:cy="211.52542"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4626">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4632" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4604">
+    <path
+       d="M320 0C143.27 0 0 143.27 0 320C0 496.73 143.27 640 320 640C496.73 640 640 496.73 640 320C640 143.27 496.73 0 320 0Z"
+       id="k2wTyMvy81" />
+    <path
+       d="M493.05 269.43L481.53 269.43L320 177.12L260.02 211.41L158.47 269.43L146.95 269.43L146.95 287.88L181.01 321.95L181.01 425.94L158.47 425.94L158.47 444.43L146.95 444.43L146.95 462.88C253.16 569.09 312.16 628.09 323.97 639.9C469.55 638.12 591.66 539.18 628.53 404.89C610.46 386.83 565.3 341.68 493.05 269.43Z"
+       id="a6GLJuC7R" />
+  </defs>
+  <g
+     id="g4624"
+     style="opacity:0.7">
+    <g
+       id="g4622"
+       style="">
+      <g
+         id="g4612"
+         style="">
+        <use
+           xlink:href="#k2wTyMvy81"
+           opacity="1"
+           fill="#fffdba"
+           fill-opacity="1"
+           id="use4606"
+           style="" />
+        <g
+           id="g4610"
+           style="">
+          <use
+             xlink:href="#k2wTyMvy81"
+             opacity="1"
+             fill-opacity="0"
+             stroke="#000000"
+             stroke-width="1"
+             stroke-opacity="0"
+             id="use4608"
+             style="" />
+        </g>
+      </g>
+      <g
+         id="g4620"
+         style="">
+        <use
+           xlink:href="#a6GLJuC7R"
+           opacity="1"
+           fill="#ccca91"
+           fill-opacity="1"
+           id="use4614"
+           style="" />
+        <g
+           id="g4618"
+           style="">
+          <use
+             xlink:href="#a6GLJuC7R"
+             opacity="1"
+             fill-opacity="0"
+             stroke="#000000"
+             stroke-width="1"
+             stroke-opacity="0"
+             id="use4616"
+             style="" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
