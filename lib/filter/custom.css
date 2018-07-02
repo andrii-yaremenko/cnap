@@ -49,7 +49,7 @@ a {
 }
 #filter {
     background-color: #555;
-    height: 40%;
+    height: 50%;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -58,13 +58,13 @@ a {
 #left{
     position: absolute;
     width: 60px;
-    height: 40%;
+    height: 50%;
 }
 #right{
     position: absolute;
     right: 0;
     margin: 2px 10px 50px 0px;
-    height: 40%;
+    height: 50%;
 }
 .legend {
     background-color: #555;
@@ -178,6 +178,19 @@ input[type=checkbox] {
   background: #3232ff;
   opacity: 1;
 }
+#priorOtg:checked + label:before {
+  background: #fffdba;
+  opacity: 1;
+}
+#subvention:checked + label:before {
+  background: #4fff19;
+  opacity: 1;
+}
+#dfrr:checked + label:before {
+  background: #3df5ff;
+  opacity: 1;
+}
+
 /* Сдвигаем переключатель чекбокса, когда он включен. */
 .squaredTwo:checked + label:after {
   left: 26px;

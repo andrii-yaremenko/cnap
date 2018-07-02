@@ -31,29 +31,38 @@
 
 Надати інформацію стосовно роботи ЦНАПів.<br /><br /><br /><i>Натисність на обраний об'єкт для перегляду детальної інформації<i></div>
             </div>
-            <div id="filter">
-                <div id="legend_name">Проекти та донорські організації</div>
+            <div id="filter" style="bottom: 10px">
+                <div id="legend_name">ЦНАП, що підтримуються:</div>
                 <div id="left">
                     <div class='legend'>EGAP</div>
                     <div class='legend'>U-LEAD</div>
                     <div class='legend'>GIZ</div>
                     <div class='legend'>EU Project</div>
                     <div class='legend'>UNDP</div>
-                    <div class='legend' style="padding: 15px 10px 0px 10px">Без підтримки донорів</div>
+                    <div class='legend'>ДФРР</div>
+                    <div class='legend'>Інфраструктурна субвенція ОТГ</div> 
+                    <div class='legend'>Без підтримки</div>
+                    <div class='legend'>Пріорітетні НП <br>для утворення ЦНАП</br></div>
                 </div>
-                <div id="right">
-                    <div style="margin: 10px 60px 0px 0px"><input type="checkbox" class="squaredTwo" value="egap" id="egap" name="check" checked /> 
+                  <div id="right">
+                    <div style="margin: 8px 60px 0px 0px"><input type="checkbox" class="squaredTwo" value="egap" id="egap" name="check" checked /> 
                     <label for="egap"></label></div>
-                    <div style="margin-top: 38px"><input type="checkbox" class="squaredTwo" value="ulead" id="ulead" name="check" checked /> 
+                    <div style="margin-top: 36px"><input type="checkbox" class="squaredTwo" value="ulead" id="ulead" name="check" checked /> 
                     <label for="ulead"></label></div>
-                    <div style="margin-top: 67px"><input type="checkbox" class="squaredTwo" value="giz" id="giz" name="check" checked /> 
+                    <div style="margin-top: 65px"><input type="checkbox" class="squaredTwo" value="giz" id="giz" name="check" checked /> 
                     <label for="giz"></label></div>
-                    <div style="margin-top: 96px"><input type="checkbox" class="squaredTwo" value="euproject" id="euproject" name="check" checked /> 
+                    <div style="margin-top: 94px"><input type="checkbox" class="squaredTwo" value="euproject" id="euproject" name="check" checked /> 
                     <label for="euproject"></label></div>
-                    <div style="margin-top: 125px"><input type="checkbox" class="squaredTwo" value="undp" id="undp" name="check" checked /> 
+                    <div style="margin-top: 121px"><input type="checkbox" class="squaredTwo" value="undp" id="undp" name="check" checked /> 
                     <label for="undp"></label></div>
-                    <div style="margin-top: 160px"><input type="checkbox" class="squaredTwo" style="margin-top: 20px" value="rest" id="rest" name="check" checked /> 
-                    <label for="rest"></label></div>          
+                    <div style="margin-top: 150px"><input type="checkbox" class="squaredTwo" value="dfrr" id="dfrr" name="check" checked /> 
+                    <label for="dfrr"></label></div>
+                    <div style="margin-top: 179px"><input type="checkbox" class="squaredTwo" value="subvention" id="subvention" name="check" checked /> 
+                    <label for="subvention"></label></div>
+                    <div style="margin-top: 207px"><input type="checkbox" class="squaredTwo" value="rest" id="rest" name="check" checked />
+                    <label for="rest"></label></div>      
+                    <div style="margin-top: 235px"><input type="checkbox" class="squaredTwo" value="priorOtg" id="priorOtg" name="check" checked /> 
+                    <label for="priorOtg"></label></div>
                 </div>
             </div>
         <script>
@@ -151,6 +160,41 @@
                 }
             };
 
+            // yarik
+
+            function pointStyle_priorOtg_perm(feature){
+                return {
+                    radius: 1,
+                    fillColor: "#fffdba",
+                    color: "#fffdba",
+                    weight: 1,
+                    opacity: 0.6,
+                    fillOpacity: 0.7   
+                }
+            };
+
+            function pointStyle_subvention_perm(feature){
+                return {
+                    radius: 0.5,
+                    fillColor: "#4fff19",
+                    color: "#4fff19",
+                    weight: 1,
+                    opacity: 0.9,
+                    fillOpacity: 0.9   
+                }
+            };
+
+             function pointStyle_dfrr_perm(feature){
+                return {
+                    radius: 0.5,
+                    fillColor: "#3df5ff",
+                    color: "#3df5ff",
+                    weight: 1,
+                    opacity: 0.9,
+                    fillOpacity: 0.9   
+                }
+            };
+
             function pointStyle_GIZ_perm(feature){
                 return {
                     radius: 1,
@@ -216,6 +260,42 @@
                     fillOpacity: 0.7
                 }
             };
+
+            // yarik
+
+            function pointStyle_priorOtg_5(feature){
+                return {
+                    radius: 2,
+                    fillColor: "#fffdba",
+                    color: "black",
+                    weight: 1,
+                    opacity: 0.6,
+                    fillOpacity: 0.7   
+                }
+            };
+
+             function pointStyle_subvention_5(feature){
+                return {
+                    radius: 1,
+                    fillColor: "#4fff19",
+                    color: "#cc56ff",
+                    weight: 1,
+                    opacity: 0.9,
+                    fillOpacity: 0.9   
+                }
+            };
+
+            function pointStyle_dfrr_5(feature){
+                return {
+                    radius: 1,
+                    fillColor: "#3df5ff",
+                    color: "#ff56eb",
+                    weight: 1,
+                    opacity: 0.9,
+                    fillOpacity: 0.9   
+                }
+            };
+            
 
             function pointStyle_GIZ_5(feature){
                 return {
@@ -328,6 +408,41 @@
                 }
             };
 
+            // yarik
+            function pointStyle_priorOtg_6(feature){
+                return {
+                    radius: 3.5,
+                    fillColor: "#fffdba",
+                    color: "black",
+                    weight: 1.4,
+                    opacity: 0.6,
+                    fillOpacity: 0.6   
+                }
+            }; 
+
+             function pointStyle_subvention_6(feature){
+                return {
+                    radius: 1.7,
+                    fillColor: "#4fff19",
+                    color: "#cc56ff",
+                    weight: 1.4,
+                    opacity: 0.9,
+                    fillOpacity: 0.9   
+                }
+            }; 
+
+             function pointStyle_dfrr_6(feature){
+                return {
+                    radius: 1.7,
+                    fillColor: "#3df5ff",
+                    color: "#ff56eb",
+                    weight: 1.4,
+                    opacity: 0.9,
+                    fillOpacity: 0.9   
+                }
+            }; 
+
+
             function pointStyle_ULEAD_6_pr(feature){
                 return {
                     radius: 3.5,
@@ -429,6 +544,27 @@
             };
 
             // ZOOM 7
+
+            // yarik
+
+            var priorOtg_7_style = L.icon({
+                iconUrl: 'data/priorOtg_7.svg',
+                iconSize: [16, 16],
+                iconAnchor: [8,8]
+            });
+
+             var subvention_7_style = L.icon({
+                iconUrl: 'data/subvention_7.svg',
+                iconSize: [16, 16],
+                iconAnchor: [8,8]
+            });
+
+              var dfrr_7_style = L.icon({
+                iconUrl: 'data/dfrr_7.svg',
+                iconSize: [16, 16],
+                iconAnchor: [8,8]
+            });
+
             var giz_7_style = L.icon({
                 iconUrl: 'data/egap_7.svg',
                 iconSize: [16, 16],
@@ -489,6 +625,27 @@
             });                                    
 
             // ZOOM 8
+
+            // yarik
+
+            var priorOtg_8_style = L.icon({
+                iconUrl: 'data/priorOtg_8.svg',
+                iconSize: [24, 24],
+                iconAnchor: [12,12]
+            });
+
+            var subvention_8_style = L.icon({
+                iconUrl: 'data/subvention_8.svg',
+                iconSize: [24, 24],
+                iconAnchor: [12,12]
+            });
+
+            var dfrr_8_style = L.icon({
+                iconUrl: 'data/dfrr_8.svg',
+                iconSize: [24, 24],
+                iconAnchor: [12,12]
+            });
+
             var giz_8_style = L.icon({
                 iconUrl: 'data/egap_8.svg',
                 iconSize: [24, 24],
@@ -583,6 +740,86 @@
                 onEachFeature: onEachFeaturePointsPopup,
                     });
                 map.addLayer(rest_perm)
+
+
+                // yarik 
+
+                 var priorOtg_5 = new L.geoJson(response,{
+                style: pointStyle_priorOtg_5,
+                filter: function(feature, layer){
+                    return feature.properties.donor == "priorOtg";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    var circle =  L.circleMarker(latlng,pointStyle);
+                    return circle;
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+
+                var priorOtg_perm = new L.geoJson(response,{
+                style: pointStyle_priorOtg_perm,
+                filter: function(feature, layer){
+                    return feature.properties.donor == "priorOtg";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    var circle =  L.circleMarker(latlng,pointStyle);
+                    return circle;
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+                map.addLayer(priorOtg_perm)
+
+                 var subvention_5 = new L.geoJson(response,{
+                style: pointStyle_subvention_5,
+                filter: function(feature, layer){
+                    return feature.properties.donor == "subvention";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    var circle =  L.circleMarker(latlng,pointStyle);
+                    return circle;
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+
+                var subvention_perm = new L.geoJson(response,{
+                style: pointStyle_subvention_perm,
+                filter: function(feature, layer){
+                    return feature.properties.donor == "subvention";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    var circle =  L.circleMarker(latlng,pointStyle);
+                    return circle;
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+                map.addLayer(subvention_perm)
+
+
+                var dfrr_5 = new L.geoJson(response,{
+                style: pointStyle_dfrr_5,
+                filter: function(feature, layer){
+                    return feature.properties.donor == "dfrr";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    var circle =  L.circleMarker(latlng,pointStyle);
+                    return circle;
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+
+                var dfrr_perm = new L.geoJson(response,{
+                style: pointStyle_dfrr_perm,
+                filter: function(feature, layer){
+                    return feature.properties.donor == "dfrr";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    var circle =  L.circleMarker(latlng,pointStyle);
+                    return circle;
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+                map.addLayer(dfrr_perm)
+
 
                 var egap_5 = new L.geoJson(response,{
                 style: pointStyle_EGAP_5,
@@ -821,6 +1058,46 @@
                 onEachFeature: onEachFeaturePointsPopup,
                     });
 
+
+                // yarik
+
+                var priorOtg_6 = new L.geoJSON(response,{
+                style: pointStyle_priorOtg_6,
+                filter: function(feature, layer){
+                    return feature.properties.donor == "priorOtg";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    var circle =  L.circleMarker(latlng,pointStyle);
+                    return circle;
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+
+                var subvention_6 = new L.geoJSON(response,{
+                style: pointStyle_subvention_6,
+                filter: function(feature, layer){
+                    return feature.properties.donor == "subvention";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    var circle =  L.circleMarker(latlng,pointStyle);
+                    return circle;
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+
+                var dfrr_6 = new L.geoJSON(response,{
+                style: pointStyle_dfrr_6,
+                filter: function(feature, layer){
+                    return feature.properties.donor == "dfrr";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    var circle =  L.circleMarker(latlng,pointStyle);
+                    return circle;
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+
+
                 var egap_6 = new L.geoJSON(response,{
                 style: pointStyle_EGAP_6,
                 filter: function(feature, layer){
@@ -939,6 +1216,38 @@
                 onEachFeature: onEachFeaturePointsPopup,
                     });
 
+                // yarik
+
+                var priorOtg_7 = new L.geoJSON(response,{
+                filter: function(feature, layer){
+                    return feature.properties.donor == "priorOtg";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    return L.marker(latlng, {icon: priorOtg_7_style});
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+
+                var subvention_7 = new L.geoJSON(response,{
+                filter: function(feature, layer){
+                    return feature.properties.donor == "subvention";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    return L.marker(latlng, {icon: subvention_7_style});
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+
+                var dfrr_7 = new L.geoJSON(response,{
+                filter: function(feature, layer){
+                    return feature.properties.donor == "dfrr";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    return L.marker(latlng, {icon: dfrr_7_style});
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+
                 var egap_7 = new L.geoJSON(response,{
                 filter: function(feature, layer){
                     return feature.properties.donor == "EGAP Program";
@@ -1038,6 +1347,40 @@
                 },
                 onEachFeature: onEachFeaturePointsPopup,
                     });
+
+
+                // yarik
+
+                var priorOtg_8 = new L.geoJSON(response,{
+                filter: function(feature, layer){
+                    return feature.properties.donor == "priorOtg";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    return L.marker(latlng, {icon: priorOtg_8_style});
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+
+                var subvention_8 = new L.geoJSON(response,{
+                filter: function(feature, layer){
+                    return feature.properties.donor == "subvention";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    return L.marker(latlng, {icon: subvention_8_style});
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+
+                var dfrr_8 = new L.geoJSON(response,{
+                filter: function(feature, layer){
+                    return feature.properties.donor == "dfrr";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    return L.marker(latlng, {icon: dfrr_8_style});
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+
 
                 var egap_8 = new L.geoJSON(response,{
                 filter: function(feature, layer){
@@ -1148,7 +1491,40 @@
                     else {
                         map.removeLayer(egap);
                         egap = L.layerGroup([egap_5, egap_5_pr]);
-                    };           
+                    }; 
+
+                    //yarik 
+
+                    if (map.hasLayer(priorOtg)) {
+                        map.removeLayer(priorOtg);
+                        priorOtg = priorOtg_5;
+                        map.addLayer(priorOtg);
+                    }
+                    else {
+                        map.removeLayer(priorOtg);
+                        priorOtg = priorOtg_5;
+                    };
+
+                     if (map.hasLayer(subvention)) {
+                        map.removeLayer(subvention);
+                        subvention = subvention_5;
+                        map.addLayer(subvention);
+                    }
+                    else {
+                        map.removeLayer(subvention);
+                        subvention = subvention_5;
+                    };
+
+                     if (map.hasLayer(dfrr)) {
+                        map.removeLayer(dfrr);
+                        dfrr = dfrr_5;
+                        map.addLayer(dfrr);
+                    }
+                    else {
+                        map.removeLayer(dfrr);
+                        dfrr = dfrr_5;
+                    };
+
                     if (map.hasLayer(ulead)) {
                         map.removeLayer(ulead);
                         ulead = L.layerGroup([ulead_5, ulead_5_pr]);
@@ -1205,7 +1581,37 @@
                     else {
                         map.removeLayer(egap);
                         egap = L.layerGroup([egap_6, egap_6_pr]);
-                    };                    
+                    };       
+
+                    //yarik 
+
+                    if (map.hasLayer(priorOtg)) {
+                        map.removeLayer(priorOtg);
+                        priorOtg = priorOtg_6;
+                        map.addLayer(priorOtg);
+                    }
+                    else {
+                        map.removeLayer(priorOtg);
+                        priorOtg =priorOtg_6;
+                    };
+                    if (map.hasLayer(subvention)) {
+                        map.removeLayer(subvention);
+                        subvention = subvention_6;
+                        map.addLayer(subvention);
+                    }
+                    else {
+                        map.removeLayer(subvention);
+                        subvention = subvention_6;
+                    };
+                    if (map.hasLayer(dfrr)) {
+                        map.removeLayer(dfrr);
+                        dfrr = dfrr_6;
+                        map.addLayer(dfrr);
+                    }
+                    else {
+                        map.removeLayer(dfrr);
+                        dfrr = dfrr_6;
+                    };
                     if (map.hasLayer(ulead)) {
                         map.removeLayer(ulead);
                         ulead = L.layerGroup([ulead_6, ulead_6_pr])
@@ -1273,6 +1679,35 @@
                         map.removeLayer(ulead);
                         ulead = L.layerGroup([ulead_7, ulead_7_pr]);
                     };
+
+                    // yarik 
+                    if (map.hasLayer(priorOtg)) {
+                        map.removeLayer(priorOtg);
+                        priorOtg = priorOtg_7;
+                        map.addLayer(priorOtg_7);
+                    }
+                    else {
+                        map.removeLayer(priorOtg);
+                        priorOtg = priorOtg_7;
+                    };
+                    if (map.hasLayer(subvention)) {
+                        map.removeLayer(subvention);
+                        subvention =subvention_7;
+                        map.addLayer(subvention_7);
+                    }
+                    else {
+                        map.removeLayer(subvention);
+                        subvention = subvention_7;
+                    };
+                    if (map.hasLayer(dfrr)) {
+                        map.removeLayer(dfrr);
+                        dfrr = dfrr_7;
+                        map.addLayer(dfrr_7);
+                    }
+                    else {
+                        map.removeLayer(dfrr);
+                        dfrr = dfrr_7;
+                    };
                     if (map.hasLayer(giz)) {
                         map.removeLayer(giz);
                         giz = L.layerGroup([giz_7, giz_7_pr]);
@@ -1320,7 +1755,37 @@
                     else {
                         map.removeLayer(egap);
                         egap = L.layerGroup([egap_8, egap_8_pr]);
-                    };                    
+                    };     
+
+                    // yarik 
+
+                    if (map.hasLayer(priorOtg)) {
+                        map.removeLayer(priorOtg);
+                        priorOtg = priorOtg_8;
+                        map.addLayer(priorOtg);
+                    }
+                    else {
+                        map.removeLayer(priorOtg);
+                        priorOtg = priorOtg_8;
+                    };
+                    if (map.hasLayer(subvention)) {
+                        map.removeLayer(subvention);
+                        subvention = subvention_8;
+                        map.addLayer(subvention);
+                    }
+                    else {
+                        map.removeLayer(subvention);
+                        subvention = subvention_8;
+                    };
+                    if (map.hasLayer(dfrr)) {
+                        map.removeLayer(dfrr);
+                        dfrr = dfrr_8;
+                        map.addLayer(dfrr);
+                    }
+                    else {
+                        map.removeLayer(dfrr);
+                        dfrr = dfrr_8;
+                    };
                     if (map.hasLayer(ulead)) {
                         map.removeLayer(ulead);
                         ulead = L.layerGroup([ulead_8, ulead_8_pr]);
@@ -1371,13 +1836,18 @@
                     };
                 });
 
+                // yarik 
+
                 rest = rest_6;
                 undp = undp_6;
+                priorOtg = priorOtg_6;
+                subvention = subvention_6;
+                dfrr = dfrr_6;
                 euproject = L.layerGroup([euproject_6, euproject_6_pr]);
                 egap = L.layerGroup([egap_6, egap_6_pr]);
                 giz = L.layerGroup([giz_6, giz_6_pr]);
                 ulead = L.layerGroup([ulead_6, ulead_6_pr]);
-                lz6 = L.layerGroup([rest, euproject, egap, giz, ulead, undp]);
+                lz6 = L.layerGroup([rest, euproject, egap, giz, ulead, undp, priorOtg, subvention, dfrr]);
                 map.addLayer(lz6);
                 }); 
 
@@ -1407,6 +1877,6 @@
             ga('create', 'UA-102334151-3', 'auto');
             ga('send', 'pageview');
         </script>
-        <a target="_blank" href="http://cnap.in.ua"><div class="image"></div></a>
+          <a target="_blank" href="http://cnap.in.ua"><div class="image"></div></a>
     </body>
 </html>
