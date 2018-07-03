@@ -49,7 +49,7 @@ a {
 }
 #filter {
     background-color: #555;
-    height: 50%;
+    height: 52%;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -58,7 +58,7 @@ a {
 #left{
     position: absolute;
     width: 60px;
-    height: 50%;
+    height: 52%;
 }
 #right{
     position: absolute;
@@ -188,6 +188,10 @@ input[type=checkbox] {
 }
 #dfrr:checked + label:before {
   background: #3df5ff;
+  opacity: 1;
+}
+#ucbi_idlo:cheked + label:before {
+  background: #663301;
   opacity: 1;
 }
 
