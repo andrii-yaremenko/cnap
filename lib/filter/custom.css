@@ -191,7 +191,7 @@ input[type=checkbox] {
   opacity: 1;
 }
 #ucbi_idlo:cheked + label:before {
-  background: black;
+  background: #666;
   opacity: 1;
 }
 
