@@ -56,8 +56,8 @@
                     <label for="euproject"></label></div>
                     <div style="margin-top: 121px"><input type="checkbox" class="squaredTwo" value="undp" id="undp" name="check" checked /> 
                     <label for="undp"></label></div>
-                    <div style="margin-top: 150px"><input type="checkbox" class="squaredTwo" value="ucbi_idlo" id="ucbi_idlo" name="check" checked />
-                    <label for="ucbi_idlo"></label></div>
+                    <div style="margin-top: 150px"><input type="checkbox" class="squaredTwo" value="ui" id="ui" name="check" checked />     
+                    <label for="ui"></label></div>
                     <div style="margin-top: 179px"><input type="checkbox" class="squaredTwo" value="dfrr" id="dfrr" name="check" checked /> 
                     <label for="dfrr"></label></div>
                     <div style="margin-top: 207px"><input type="checkbox" class="squaredTwo" value="subvention" id="subvention" name="check" checked /> 
@@ -198,6 +198,18 @@
                 }
             };
 
+              function ui_perm(feature){
+                return {
+                    radius: 1,
+                    fillColor: "#663300",
+                    color: "#663300",
+                    weight: 1,
+                    opacity: 0.6,
+                    fillOpacity: 0.7   
+                }
+            };
+
+
             function pointStyle_GIZ_perm(feature){
                 return {
                     radius: 1,
@@ -299,6 +311,16 @@
                 }
             };
             
+             function ui_5(feature){
+                return {
+                    radius: 2,
+                    fillColor: "#663300",
+                    color: "black",
+                    weight: 1,
+                    opacity: 0.6,
+                    fillOpacity: 0.7   
+                }
+            };
 
             function pointStyle_GIZ_5(feature){
                 return {
@@ -445,6 +467,17 @@
                 }
             }; 
 
+            function pointStyle_priorOtg_6(feature){
+                return {
+                    radius: 3.5,
+                    fillColor: "#663300",
+                    color: "black",
+                    weight: 1.4,
+                    opacity: 0.6,
+                    fillOpacity: 0.6   
+                }
+            }; 
+
 
             function pointStyle_ULEAD_6_pr(feature){
                 return {
@@ -568,6 +601,12 @@
                 iconAnchor: [8,8]
             });
 
+              var priorOtg_7_style = L.icon({
+                iconUrl: 'data/ui_7.svg',
+                iconSize: [16, 16],
+                iconAnchor: [8,8]
+            });
+
             var giz_7_style = L.icon({
                 iconUrl: 'data/egap_7.svg',
                 iconSize: [16, 16],
@@ -645,6 +684,12 @@
 
             var dfrr_8_style = L.icon({
                 iconUrl: 'data/dfrr_8.svg',
+                iconSize: [24, 24],
+                iconAnchor: [12,12]
+            });
+
+            var priorOtg_8_style = L.icon({
+                iconUrl: 'data/ui_8.svg',
                 iconSize: [24, 24],
                 iconAnchor: [12,12]
             });
@@ -822,6 +867,31 @@
                 onEachFeature: onEachFeaturePointsPopup,
                     });
                 map.addLayer(dfrr_perm)
+
+                var ui_5 = new L.geoJson(response,{
+                style: pointStyle_ui_5,
+                filter: function(feature, layer){
+                    return feature.properties.donor == "UCBI_IDLO";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    var circle =  L.circleMarker(latlng,pointStyle);
+                    return circle;
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+
+                var ui_perm = new L.geoJson(response,{
+                style: pointStyle_ui_perm,
+                filter: function(feature, layer){
+                    return feature.properties.donor == "UCBI_IDLO";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    var circle =  L.circleMarker(latlng,pointStyle);
+                    return circle;
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+                map.addLayer(ui_perm)
 
 
                 var egap_5 = new L.geoJson(response,{
@@ -1100,6 +1170,17 @@
                 onEachFeature: onEachFeaturePointsPopup,
                     });
 
+                var ui_6 = new L.geoJSON(response,{
+                style: pointStyle_ui_6,
+                filter: function(feature, layer){
+                    return feature.properties.donor == "UCBI_IDLO";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    var circle =  L.circleMarker(latlng,pointStyle);
+                    return circle;
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
 
                 var egap_6 = new L.geoJSON(response,{
                 style: pointStyle_EGAP_6,
@@ -1251,6 +1332,16 @@
                 onEachFeature: onEachFeaturePointsPopup,
                     });
 
+                var ui_7 = new L.geoJSON(response,{
+                filter: function(feature, layer){
+                    return feature.properties.donor == "UCBI_IDLO";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    return L.marker(latlng, {icon: ui_7_style});
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+
                 var egap_7 = new L.geoJSON(response,{
                 filter: function(feature, layer){
                     return feature.properties.donor == "EGAP Program";
@@ -1380,6 +1471,16 @@
                     },
                 pointToLayer: function (feature, latlng) {
                     return L.marker(latlng, {icon: dfrr_8_style});
+                },
+                onEachFeature: onEachFeaturePointsPopup,
+                    });
+
+                var ui_8 = new L.geoJSON(response,{
+                filter: function(feature, layer){
+                    return feature.properties.donor == "UCBI_IDLO";
+                    },
+                pointToLayer: function (feature, latlng) {
+                    return L.marker(latlng, {icon: ui_8_style});
                 },
                 onEachFeature: onEachFeaturePointsPopup,
                     });
@@ -1528,6 +1629,16 @@
                         dfrr = dfrr_5;
                     };
 
+                    if (map.hasLayer(ui)) {
+                        map.removeLayer(ui);
+                        ui = ui_5;
+                        map.addLayer(ui);
+                    }
+                    else {
+                        map.removeLayer(ui);
+                        ui = ui_5;
+                    };
+
                     if (map.hasLayer(ulead)) {
                         map.removeLayer(ulead);
                         ulead = L.layerGroup([ulead_5, ulead_5_pr]);
@@ -1615,6 +1726,17 @@
                         map.removeLayer(dfrr);
                         dfrr = dfrr_6;
                     };
+
+                    if (map.hasLayer(ui)) {
+                        map.removeLayer(ui);
+                        ui = ui_6;
+                        map.addLayer(ui);
+                    }
+                    else {
+                        map.removeLayer(ui);
+                        ui = ui_6;
+                    };
+
                     if (map.hasLayer(ulead)) {
                         map.removeLayer(ulead);
                         ulead = L.layerGroup([ulead_6, ulead_6_pr])
@@ -1711,6 +1833,16 @@
                         map.removeLayer(dfrr);
                         dfrr = dfrr_7;
                     };
+
+                    if (map.hasLayer(ui)) {
+                        map.removeLayer(ui);
+                        ui = ui_7;
+                        map.addLayer(ui_7);
+                    }
+                    else {
+                        map.removeLayer(ui);
+                        ui = ui_7;
+                    };
                     if (map.hasLayer(giz)) {
                         map.removeLayer(giz);
                         giz = L.layerGroup([giz_7, giz_7_pr]);
@@ -1789,6 +1921,15 @@
                         map.removeLayer(dfrr);
                         dfrr = dfrr_8;
                     };
+                    if (map.hasLayer(ui)) {
+                        map.removeLayer(ui);
+                        ui = ui_8;
+                        map.addLayer(ui);
+                    }
+                    else {
+                        map.removeLayer(ui);
+                        ui = ui_8;
+                    };
                     if (map.hasLayer(ulead)) {
                         map.removeLayer(ulead);
                         ulead = L.layerGroup([ulead_8, ulead_8_pr]);
@@ -1846,11 +1987,12 @@
                 priorOtg = priorOtg_6;
                 subvention = subvention_6;
                 dfrr = dfrr_6;
+                 ui = ui_6;
                 euproject = L.layerGroup([euproject_6, euproject_6_pr]);
                 egap = L.layerGroup([egap_6, egap_6_pr]);
                 giz = L.layerGroup([giz_6, giz_6_pr]);
                 ulead = L.layerGroup([ulead_6, ulead_6_pr]);
-                lz6 = L.layerGroup([rest, euproject, egap, giz, ulead, undp, priorOtg, subvention, dfrr]);
+                lz6 = L.layerGroup([rest, euproject, egap, giz, ulead, undp, priorOtg, subvention, dfrr, ui]);
                 map.addLayer(lz6);
                 }); 
 

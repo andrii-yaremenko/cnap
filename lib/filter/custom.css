@@ -190,10 +190,11 @@ input[type=checkbox] {
   background: #3df5ff;
   opacity: 1;
 }
-#ucbi_idlo:cheked + label:before {
-  background: #666;
+#ui:checked + label:before {
+  background: #663300;
   opacity: 1;
 }
+
 
 /* Сдвигаем переключатель чекбокса, когда он включен. */
 .squaredTwo:checked + label:after {
